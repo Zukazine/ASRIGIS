@@ -5,14 +5,19 @@ import { useRouter } from "next/navigation";
 const GeoPlatformPage = () => {
     const router = useRouter()
 
-    const goHome = () => {
+    const toHome = () => {
         router.push('/')
+    }
+
+    const toRsc = () => {
+        router.push('/resource')
     }
 
     return ( 
       <div>
         <h1>Geoplatform</h1>
-        <button onClick={goHome}>Back Home</button>
+        <button onClick={toRsc}>To Resource</button>
+        <button onClick={toHome}>To Home</button>
       </div>
      );
   }

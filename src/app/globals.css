@@ -2,10 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html, body, :root {
+  height: 100%;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,6 +22,63 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb)); */
+}
+
+.works {
+  margin-left: auto;
+
+}
+
+.page-links {
+  @apply md:flex h-[100vh] w-[100vw] top-0 left-0 fixed
+}
+
+.page-links a {
+  @apply border-none h-[100%] outline-none relative w-[8.95833vw]
+}
+
+.page-links a:focus {
+  @apply outline-none
+}
+
+.page-links a>div{
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.page-links a .page-link--bg {
+  transform-origin: left;
+}
+
+.page-links a .page-link--fg {
+  padding: 3.3333333333vw;
+}
+
+.page-links a .page-link--fg img {
+  height: 3.1944444444vw;
+  transform: scale(1.5);
+  transform-origin: 50% 50%;
+  width: 3.1944444444vw
+}
+
+.page-links a .page-link--fg span.name {
+  font-size: 2.5vw;
+  transform: rotate(-90deg);
+  transform: translateX(-10%);
+  width: 2.3611111111vw;
+  writing-mode: vertical-rl;
+}
+
+.page-links a .page-link--fg div.topic {
+  @apply tracking-[0.05em] text-[30px] text-[#fff]
+}
+
+
+.r {
+  background-color: #ff667d;
 }
 
 @layer utilities {

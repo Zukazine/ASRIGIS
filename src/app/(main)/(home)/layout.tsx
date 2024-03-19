@@ -4,8 +4,8 @@ const HomeLayout = ({
   children: React.ReactNode;
 }) => {
   return ( 
-    <div className="h-full dark:bg-[#1F1F1F]">
-      <main className="h-full">
+    <div className="w-[100vw] min-h-[100vh] fixed">
+      <main className="works">
         {children}
       </main>
     </div>

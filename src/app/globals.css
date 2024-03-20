@@ -35,29 +35,17 @@ html, body, :root {
   @apply p-[3.333vw]
 }
 
-.page-links a .page-link--fg img { 
-  height: 3.1944444444vw;
+.page-links a .page-link--fg img {
   transform: scale(1.5);
   transform-origin: 50% 50%;
-  width: 3.1944444444vw
-}
-
-
-.page-links a .page-link--fg span.name {
-  font-family: var(--font-giselle);
-  font-size: 2.5vw;
-  transform: rotate(-90deg);
-  transform: translateX(-10%);
-  width: 2.3611111111vw;
-  writing-mode: vertical-rl;
 }
 
 .page-links a .page-link--fg div.topic {
-  @apply tracking-[0.05em] text-[30px] text-[#fff]
+  @apply tracking-[0.05em] text-[2.33333vw] text-[#fff]
 }
 
 .page-links .page-works {
-  @apply w-[90vw]
+  @apply w-[73.333333vw]
 }
 
 .r {

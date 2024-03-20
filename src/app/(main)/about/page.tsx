@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 
-const GeoPlatformPage = () => {
+const AboutPage = () => {
     const router = useRouter()
 
     const toHome = () => {
@@ -22,4 +22,4 @@ const GeoPlatformPage = () => {
      );
   }
    
-export default GeoPlatformPage;
+export default AboutPage;

@@ -1,8 +1,22 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import localFont from "@next/font/local"
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const giselle = localFont({
+  src: [
+    {
+      path: '../../public/fonts/FHGiselle-Regular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/FHGiselle-Regular.woff2',
+      weight: '700',
+      style: 'medium',
+    }
+  ],
+  variable: '--font-giselle'
+})
 
 export const metadata: Metadata = {
   title: "ASRI",
@@ -16,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${giselle.variable} font-sans`}>{children}</body>
     </html>
   );
 }

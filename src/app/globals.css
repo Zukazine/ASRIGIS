@@ -4,6 +4,7 @@
 
 html, body, :root {
   height: 100%;
+  font-family: var(--font-giselle);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -65,6 +66,7 @@ body {
 }
 
 .page-links a .page-link--fg span.name {
+  font-family: var(--font-giselle);
   font-size: 2.5vw;
   transform: rotate(-90deg);
   transform: translateX(-10%);
@@ -79,6 +81,10 @@ body {
 
 .r {
   background-color: #ff667d;
+}
+
+.b {
+  background-color: #8283da;
 }
 
 @layer utilities {

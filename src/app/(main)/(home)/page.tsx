@@ -31,21 +31,16 @@ const HomePage = () => {
             </div>
         </Link>
 
-        <Link className="pointer-events-auto" href='/about/' passHref>
-            <div className="page-link--bg b "/>
-            <div className="page-link--fg flex flex-col justify-between items-center">
-              <img src="twitter.svg" alt="Icon of Resource Section" />
-              <div className="topic flex items-center justify-between overflow-hidden">
-                <span className="[writing-mode:vertical-lr] rotate-180 ">
-                  About
-                </span>
-              </div>
-            </div>
+        <Link className="pointer-events-none" id='page-works-dup' href='/'>
+            <div className="scale-0"/>
         </Link>
 
+        <Link className="page-works pointer-events-none" href='/'>
+            <div className="origin-right scale-0"/>
+        </Link>
 
         <Link className="pointer-events-auto" href='/about/' passHref>
-            <div className="page-link--bg b "/>
+            <div className="page-link--bg b origin-right"/>
             <div className="page-link--fg flex flex-col justify-between items-center">
               <img src="twitter.svg" alt="Icon of Resource Section" />
               <div className="topic flex items-center justify-between overflow-hidden">

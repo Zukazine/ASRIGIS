@@ -7,27 +7,8 @@ html, body, :root {
   font-family: var(--font-giselle);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  /* background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
-}
-
 .works {
-  margin-left: auto;
-
+  @apply ml-auto;
 }
 
 .page-links {
@@ -43,27 +24,24 @@ body {
 }
 
 .page-links a>div{
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
+  @apply inset-0 absolute
 }
 
 .page-links a .page-link--bg {
-  transform-origin: left;
+  @apply origin-left
 }
 
 .page-links a .page-link--fg {
-  padding: 3.3333333333vw;
+  @apply p-[3.333vw]
 }
 
-.page-links a .page-link--fg img {
+.page-links a .page-link--fg img { 
   height: 3.1944444444vw;
   transform: scale(1.5);
   transform-origin: 50% 50%;
   width: 3.1944444444vw
 }
+
 
 .page-links a .page-link--fg span.name {
   font-family: var(--font-giselle);
@@ -78,13 +56,20 @@ body {
   @apply tracking-[0.05em] text-[30px] text-[#fff]
 }
 
+.page-links .page-works {
+  @apply w-[90vw]
+}
 
 .r {
-  background-color: #ff667d;
+  @apply bg-[#ff667d]
 }
 
 .b {
-  background-color: #8283da;
+  @apply bg-[#8283da]
+}
+
+.or {
+  @apply bg-[#ff9776]
 }
 
 @layer utilities {

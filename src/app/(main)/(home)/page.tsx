@@ -8,7 +8,7 @@ const HomePage = () => {
   const router = useRouter()
 
   const toGp = () => {
-    router.push('/geoplatform')
+    router.push('/')
   }
   
   const toRsc = () => {

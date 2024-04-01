@@ -36,6 +36,8 @@ html, body, :root {
 }
 
 .page-links a .page-link--fg img {
+  height: 3.194444vw;
+  width: 3.194444vw;  
   transform: scale(1.5);
   transform-origin: 50% 50%;
 }

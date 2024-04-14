@@ -35,12 +35,12 @@ html, body, :root {
   @apply p-[3.333vw]
 }
 
-.page-links a .page-link--fg img {
-  height: 3.194444vw;
+/* .page-links a .page-link--fg img { */
+  /* height: 3.194444vw;
   width: 3.194444vw;  
   transform: scale(1.5);
-  transform-origin: 50% 50%;
-}
+  transform-origin: 50% 50%; */
+/* } */
 
 .page-links a .page-link--fg div.topic {
   @apply tracking-[0.05em] text-[2.33333vw] text-[#fff]
@@ -48,6 +48,14 @@ html, body, :root {
 
 .page-links .page-works {
   @apply w-[73.333333vw]
+}
+
+.unor-items {
+  @apply flex flex-row space-x-[10px] items-center border-[#FF975C] border-2 rounded-[10px] px-[10px] py-[5px]
+}
+
+.bread-nav-img {
+  @apply flex items-center justify-center size-[1.5vw]
 }
 
 .r {

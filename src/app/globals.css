@@ -75,3 +75,26 @@ html, body, :root {
     text-wrap: balance;
   }
 }
+
+/* SCROLLBAR */
+/* width */
+.geoscrollbar::-webkit-scrollbar {
+  width: 8px;
+  right: 0;
+}
+
+/* Track */
+.geoscrollbar::-webkit-scrollbar-track {
+  background: #DDDDDD;
+}
+
+/* Handle */
+.geoscrollbar::-webkit-scrollbar-thumb {
+  background: #FFAF83;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+.geoscrollbar::-webkit-scrollbar-thumb:hover {
+  background: #ff9776;
+}

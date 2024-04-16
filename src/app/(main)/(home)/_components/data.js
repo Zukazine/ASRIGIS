@@ -1,0 +1,42 @@
+export const geoplatform = [
+	{
+		id: 1,
+		unor: 'SDA', 
+		sektor: ['Irigasi', 'Something'],
+		nama: 'Prioritas Irigasi',
+		isArchive: false,
+		isDelete: false,
+	},
+	{
+		id: 2,
+		unor: 'BM', 
+		sektor: ['Irigasi', 'Something'],
+		nama: 'Prioritas Irigasi',
+		isArchive: false,
+		isDelete: false,
+	},
+	{
+		id: 1,
+		unor: 'SDA', 
+		sektor: ['Irigasi', 'Something'],
+		nama: 'Prioritas Irigasi',
+		isArchive: false,
+		isDelete: false,
+	},
+	{
+		id: 1,
+		unor: 'SDA', 
+		sektor: ['Irigasi', 'Something'],
+		nama: 'Prioritas Irigasi',
+		isArchive: false,
+		isDelete: false,
+	},
+	{
+		id: 1,
+		unor: 'SDA', 
+		sektor: ['Irigasi', 'Something'],
+		nama: 'Prioritas Irigasi',
+		isArchive: false,
+		isDelete: false,
+	},
+];

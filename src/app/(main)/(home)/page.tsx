@@ -7,6 +7,7 @@ import FixedFilter from "./_components/fixedFilter"
 import ViewGallery from "./_components/view"
 import SearchGallery from "./_components/search"
 import GeoNavigation from "./_components/navigation"
+import { geoplatform } from "./_components/data"
 
 const HomePage = () => {
   return (
@@ -30,12 +31,9 @@ const HomePage = () => {
           
           {/* Grid */}
           <div className="grid grid-cols-3 mt-10 px-10 gap-x-0 gap-y-8 place-content-center place-items-center">
-            <GalleryCard />
-            <GalleryCard />
-            <GalleryCard />
-            <GalleryCard />
-            <GalleryCard />
-            <GalleryCard />
+            { geoplatform.map((item, index) => (
+              <GalleryCard judul={item.nama} loc={item.loc} unor={item.unor} sektor={item.sektor} img={item.image}/> 
+            ))}
           </div>
         </div>
       </div>

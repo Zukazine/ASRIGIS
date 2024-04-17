@@ -1,6 +1,21 @@
-const GalleryCard = () => {
+import Link from "next/link";
+import {Router} from "next/router";
+
+interface CardProps {
+	judul: string;
+	loc: string;
+	unor: string;
+	sektor: Array<string>;
+	img: string;
+}
+
+const GalleryCard = ({judul, loc, unor, sektor, img} : CardProps) => {
+	if (loc == 'all'){
+		loc = 'Seluruh Wilayah Indonesia'
+	}
+	
 	return (  
-		<>
+		<Link href='/resource/'>
 			{/* card */}
 			<div className="flex flex-col bg-[#F3EFFD] h-[50vh] w-[20vw] rounded-[25px] 
 				shadow-[2px_2px_4px_0px_rgba(0,0,0,0.25)]
@@ -8,15 +23,15 @@ const GalleryCard = () => {
 			>
 				{/* image of ee apps */}
 				<div className="inset-0 overflow-hidden border-none rounded-t-[25px]">
-					<img className="object-cover w-full h-[25vh]" src="rice.png" alt="EE maps"></img>
+					<img className="object-cover w-full h-[25vh]" src={img} alt="EE maps"></img>
 				</div>
 
 				{/* briefcase */}
 				<div className="flex flex-col mt-[20px] space-y-[5px]">
 					{/* judul */}
 					<div className="flex justify-between items-center px-[17px]">
-						<div className="text-[1.5vw]">
-							Prioritas Irigasi
+						<div className="text-[1.5vw] truncate">
+							{judul}
 						</div>
 						<div>
 							<img src="option.png" alt="Option Icon"></img>
@@ -28,24 +43,29 @@ const GalleryCard = () => {
 							<img src="loc.png" alt="Location Icon"></img>
 						</div>
 						<div className="text-[1.05vw]">
-							Seluruh Provinsi Indonesia
+							{loc}
 						</div>
 					</div>
 					{/* UNOR */}
 					<div className="flex flex-row ml-[17px]">
 						<div className="text-white bg-[#FF975C] py-[1px] px-[13px] rounded-[10px] mt-[5px] text-[1vw]">
-							SDA
+							{unor}
 						</div>
 					</div>
 					{/* sektor */} 
 					<div className="flex justify-between px-[17px] items-center">
 						<div className="flex space-x-[7px] mt-[5px]">
-							<div className="rounded-[10px] border-[1px] border-[#FF975C] py-[1px] px-[13px] text-[1vw]">
+							{/* <div className="rounded-[10px] border-[1px] border-[#FF975C] py-[1px] px-[13px] text-[1vw]">
 								Irigasi
 							</div>
 							<div className="rounded-[10px] border-[1px] border-[#FF975C] py-[1px] px-[13px] text-[1vw]">
 								Something
-							</div>
+							</div> */}
+							{sektor.map((item, index) => (
+								<div className="rounded-[10px] border-[1px] border-[#FF975C] py-[1px] px-[13px] text-[1vw]">
+									{item}
+								</div>
+							))}
 						</div>
 						<div className="flex items-center justify-center h-[3.079vh] w-[1vw]">
 							<img src="sda.png" alt="SDA Icon"></img>
@@ -53,7 +73,7 @@ const GalleryCard = () => {
 					</div>
 				</div>
 			</div>
-		</>
+		</Link>
 	);
 }
  

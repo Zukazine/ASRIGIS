@@ -18,12 +18,23 @@ interface GalleryCardProps {
 }
 
 const GalleryCard: FC<GalleryCardProps> = ({ card }) => {
-	let { id } = card
-	
+	let { id } = card; let loc:string = ''; let icon_img:string = '';
+
 	if (card.loc == 'all'){
-		card.loc = 'Seluruh Wilayah Indonesia'
+		loc = 'Seluruh Wilayah Indonesia'
 	}
 	
+	if (card.unor == 'Bina Marga'){
+		icon_img = 'bm.png'
+	} else if (card.unor == 'Cipta Karya'){
+		icon_img = 'ck.png'
+	} else if (card.unor == 'Perumahan'){
+		icon_img = 'rumah.png'
+	} else {
+		icon_img = 'SDA.png'
+	}
+
+
 	return (  
 		<Link href={`/${id}`}>
 			{/* card */}
@@ -51,7 +62,7 @@ const GalleryCard: FC<GalleryCardProps> = ({ card }) => {
 							<img src="loc.png" alt="Location Icon"></img>
 						</div>
 						<div className="text-[1.05vw]">
-							{card.loc}
+							{loc}
 						</div>
 					</div>
 					{/* UNOR */}
@@ -76,7 +87,7 @@ const GalleryCard: FC<GalleryCardProps> = ({ card }) => {
 							))}
 						</div>
 						<div className="flex items-center justify-center h-[3.079vh] w-[1vw]">
-							<img src="sda.png" alt="SDA Icon"></img>
+							<img src={icon_img} alt="UNOR Icon"></img>
 						</div>
 					</div>
 				</div>

@@ -51,7 +51,11 @@ html, body, :root {
 }
 
 .unor-items {
-  @apply flex flex-row space-x-[10px] items-center border-[#FF975C] border-2 rounded-[10px] px-[10px] py-[5px]
+  @apply flex flex-row space-x-[10px] items-center border-[#FF975C] border-2 rounded-[10px] px-[10px] py-[5px] transition transform duration-100
+}
+
+.unor-items-clicked {
+  @apply flex flex-row space-x-[10px] items-center border-[#FF975C] border-2 rounded-[10px] px-[10px] py-[5px] bg-[#FF975C] bg-opacity-35 transition transform duration-100
 }
 
 .bread-nav-img {

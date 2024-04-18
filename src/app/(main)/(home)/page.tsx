@@ -1,7 +1,6 @@
 'use client'
 
 import GalleryCard from "./_components/card"
-import Image from "next/image"
 import GPFilter from "./_components/filter"
 import FixedFilter from "./_components/fixedFilter"
 import ViewGallery from "./_components/view"
@@ -30,9 +29,9 @@ const HomePage = () => {
           <SearchGallery /> 
           
           {/* Grid */}
-          <div className="grid grid-cols-3 mt-10 px-10 gap-x-0 gap-y-8 place-content-center place-items-center">
+          <div className="large-gallery sm:small-gallery">
             { geoplatform.map((item, index) => (
-              <GalleryCard judul={item.nama} loc={item.loc} unor={item.unor} sektor={item.sektor} img={item.image}/> 
+              <GalleryCard card={item}/> 
             ))}
           </div>
         </div>
@@ -40,7 +39,7 @@ const HomePage = () => {
 
       {/* Background */}
       <div className="bg-[#f9f5ed] inset-0 relative pointer-events-none" />
-      
+            
       {/* Navigation */}
       <GeoNavigation />
     </>

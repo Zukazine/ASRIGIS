@@ -1,30 +1,25 @@
-// pages/[id].js
-import { data } from '../data';
+// pages/[id].js or pages/[id].tsx
+import { useRouter } from 'next/router';
+import { geoplatform } from '../path/to/data';
 
-export async function getStaticPaths() {
-  const paths = Object.keys(data).map(id => ({
-    params: { id },
-  }));
+const CardDetailPage = () => {
+  const router = useRouter();
+  const { id } = router.query;
 
-  return { paths, fallback: false };
-}
+  const card = geoplatform.find(card => card.id === Number(id));
 
-export async function getStaticProps({ params }) {
-  const { id } = params;
-  const pageData = data[id];
+  if (!card) return <div>Loading...</div>;
 
-  return {
-    props: {
-      pageData,
-    },
-  };
-}
+  const { link, image } = card;
 
-export default function Page({ pageData }) {
+  // Render the card details
   return (
     <div>
-      <h1>{pageData.title}</h1>
-      <p>{pageData.content}</p>
+      <h1>Card Details</h1>
+      <img src={image} alt="Card Image" />
+      <a href={link} target="_blank" rel="noopener noreferrer">Link</a>
     </div>
   );
-}
+};
+
+export default CardDetailPage;

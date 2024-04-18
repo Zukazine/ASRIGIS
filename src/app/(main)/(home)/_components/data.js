@@ -25,7 +25,7 @@ export const geoplatform = [
 		id: 3,
 		unor: 'Bina Marga', 
 		sektor: ['Jalan Tol'],
-		nama: 'ROAD NETWORK INDEX OF SOUTHEAST ASIA ANIMAL HABITATS DISTURBANCE',
+		nama: 'Road Network Index of Southeast Asia Animal Habitats',
         loc: 'all',
 		link: 'https://cokrosantoso.users.earthengine.app/view/roadconflict',
 		image: 'ee_bm.png',
